@@ -33,15 +33,6 @@ justify-content: 0px 5%;
 cursor: pointer;
 }
 
-.heroGridArea{
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  align-items: center;
-  display: flex;
-  position: relative;
-}
-
 #headline{
   border: 5px solid #FF6200;
   background-color: rgba(255,255,255,0.8);
@@ -51,6 +42,75 @@ cursor: pointer;
   z-index: 150;
   padding: 20px;
 }
+
+.heroGridArea{
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  align-items: center;
+  display: flex;
+  position: relative;
+}
+
+.subHeading{
+  text-align: center;
+  border-bottom: 2px solid black;
+  width: 300px;
+  margin: 50px auto;
+}
+
+#categoryGrid{
+  margin: 0px 5%;
+  display: grid;
+  min-height: 300px;
+  grid-template-rows: 1/3 1/3 1/3 2/3 1/3 1;
+  grid-template-columns: 1/3 1/3 1/3;
+  grid-template-areas:
+  "Bookcases" "Bedroom" "Couches" 
+  "Patio"
+  "Desks";
+}
+
+#bookcases{
+background-image: url("../images/bookcases.png");
+}
+
+#bedroom{
+background-image: url("../images/beds.png");
+}
+
+#couches{
+background-image: url("../images/couch.png");
+}
+
+#patio{
+background-image: url("../images/patio.png");
+}
+
+#desks{
+background-image: url("../images/desks.png");
+}
+
+.categoryGridArea{
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 5px;
+  cursor: pointer;
+  display: grid;
+  align-content: end;
+}
+
+.heading{
+  background-color: rgba(0,0,0,0.7)
+  padding: 15px;
+  height: 25px;
+  color: white;
+  font-size: 18px;
+  border-bottom: 5px solid #FF6200
+}
+
+
 
 
 /* Navigation CSS */
