@@ -62,32 +62,36 @@ cursor: pointer;
 #categoryGrid{
   margin: 0px 5%;
   display: grid;
-  min-height: 300px;
-  grid-template-rows: 1/3 1/3 1/3 2/3 1/3 1;
-  grid-template-columns: 1/3 1/3 1/3;
+  grid-template-rows: 300px 300px 300px;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-template-areas:
-  "Bookcases" "Bedroom" "Couches" 
-  "Patio"
-  "Desks";
+  "bookcases bedroom patio" 
+  "couches couches patio"
+  "desks desks desks";
 }
 
 #bookcases{
+grid-area: bookcases;
 background-image: url("../images/bookcases.png");
 }
 
 #bedroom{
+grid-area: bedroom;
 background-image: url("../images/beds.png");
 }
 
 #couches{
+grid-area: couches;
 background-image: url("../images/couch.png");
 }
 
 #patio{
+grid-area: patio;
 background-image: url("../images/patio.png");
 }
 
 #desks{
+grid-area: desks;
 background-image: url("../images/desks.png");
 }
 
@@ -102,12 +106,12 @@ background-image: url("../images/desks.png");
 }
 
 .heading{
-  background-color: rgba(0,0,0,0.7)
+  background-color: rgba(0,0,0,0.7);
   padding: 15px;
   height: 25px;
   color: white;
   font-size: 18px;
-  border-bottom: 5px solid #FF6200
+  border-bottom: 5px solid #FF6200;
 }
 
 
@@ -176,4 +180,36 @@ h4 {
   font-weight: 300;
   margin: 0px 0px;
   color: #636364;
+}
+
+@media only screen and (max-width: 1000px) {
+
+#navigation{
+  display: none;
+
+}
+
+.icons{
+  margin-left: auto;
+}
+}
+
+@media only screen and (max-width: 600px) {
+
+  #headline{
+    position: static;
+    margin: 20px;
+  }
+
+  #heroGrid{
+    grid-template-areas: 
+    "featuredProduct featuredProduct"
+    "secondaryProduct CTA";
+  }
+
+  #categoryGrid{
+    grid-template-rows: 300px 300px 300px 300px 300px;
+    grid-template-columns: 1fr;
+    grid-template-areas: "bookcases" "bedroom" "patio" "couches" "desks";
+  }
 }
